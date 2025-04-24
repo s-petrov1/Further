@@ -46,3 +46,7 @@ This is a minimal Next.js application demonstrating how to integrate **Google Ta
 ---
 
 Built for educational and testing use with Google Tag Manager.
+
+---
+
+Assisted by ChaptGPT and validated by Steven Petrov 04/24/2025
