@@ -38,6 +38,30 @@ This is a minimal Next.js application demonstrating how to integrate **Google Ta
 3. **Open the app**:
    Visit [http://localhost:3000](http://localhost:3000)
 
+🔍 4. Test GTM events in the browser
+Open Developer Tools (F12) > Console tab, and try the following:
+
+![landing_page](https://github.com/user-attachments/assets/9643ae6b-df72-4b67-b470-8056c4481cfb)
+
+✅ Test custom event:
+Click the “Request Demo” button.
+
+
+// You should see this object in the console if you log dataLayer
+```js
+window.dataLayer.at(-1) 
+// Should return something like: { event: "request_demo_clicked" }
+```
+✅ Test page view event:
+If you navigate between pages (add another page if needed), check that:
+
+```js
+window.dataLayer.at(-1) 
+// Should return something like: { event: "page_view", page_path: "/about" }
+```
+![before_after_click](https://github.com/user-attachments/assets/e15a6312-9866-4d48-8b8e-8f9dcbbe6398)
+
+
 ## 📝 Notes
 
 - Replace `GTM-XXXXXXX` in `index.js` with your actual GTM container ID.
